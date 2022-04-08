@@ -35,10 +35,9 @@ Logic for finding scale factor and position where threat object has to be pasted
 Logic used for trans_blend function : 
 	Image_pste option directly pastes the threat onto baggae without adding any translucency. So inorder to bring in translucency , first a trsnsparent image of size of the background image (baggage image) has been made and the threat object has been pasted on to this transparent image using it's mask. Image.blend() option combines two equal sized images with this transparency factor which we can control. But the problem with this is that it makes both the images transparent to some extent based on the input parameter we give . If we give 0.7 then the first image will be shown with 70 % of its brightness and second image will be blended with 30% of its brightness.So inorder to keep the background images more bright and opaque , I made two images , one having the blend of baggage and threat object with 65% threat object and other having blend of threat and bag with 100% baggage and then did alpha_composite of both to lay threat on baggage. Example has been shown below
 
-![i](https://user-images.githubusercontent.com/76999699/162408530-5e52b944-360c-4ff1-a82e-037ad91b755f.png)  
-![j](https://user-images.githubusercontent.com/76999699/162408570-e240e407-cd51-4327-9c25-1b9c9c7688de.png)  
+![i](https://user-images.githubusercontent.com/76999699/162408530-5e52b944-360c-4ff1-a82e-037ad91b755f.png)
+![j](https://user-images.githubusercontent.com/76999699/162408570-e240e407-cd51-4327-9c25-1b9c9c7688de.png) 
 ![k](https://user-images.githubusercontent.com/76999699/162408611-571088c9-249f-4c5b-9573-e842434c6962.png)  
-threat blended with more percent              baggage blended with more percent                  alpha_composite of above two images 
 
 
 
